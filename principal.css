@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: rgb(240, 190, 175);
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    height: 35px;
+}
+#MENU {
+    width: 80%;
+    padding: 0%;
+    margin: 0%;
+}
+
+#MENU ul li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;    
+    align-content: center;
+    width: 100%;
+}
+
+#MENU ul li{
+    list-style: none;
+    margin: 10px auto;
+}
+
+
+.btn-Toggle {
+    display: none;
+}
+
+body{
+    background: url('../images/banner.jpeg') no-repeat;
+    background-size: cover;
+}
+
+/* Categorias de Menu**/
+#cate{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#cate article{
+    background-color: rgb(253, 176, 145);
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 50px;
+    
+}
+
+#img{
+    border-radius: 20px;
+}
+
+#cate article h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+h2{
+    color: rgb(49, 9, 9);
+    font-family: 'Dancing Script', cursive;
+
+}
+
+h1{
+    color: ghostwhite;
+    font-family: 'Pattaya', sans-serif;
+}
+
+/*Platillos*/
+
+#Platillos{
+    background-color: rgba(172, 36, 77, 0.363);
+    border-radius: 10px;
+}
+
+#Platillos section{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Platillos section img{
+    height: 125px;
+    width: 160px;
+}
+
+#Platillos section article{
+    display: flex;
+    flex-direction: row;
+}
+
+#Platillos section article p{
+    text-align: center;
+}
+
+/*Contactos*/
+
+#infoContactos{
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(112, 92, 121);
+    text-align: center;
+}
+
+
+/* Definiendo los media queries para dispositivos Medianos*/
+@media only screen and (max-width: 760px){
+    body{
+        background: rgba(235, 205, 142, 0.849);
+    }
+
+    /* Coloco miMenu Verticalmente*/
+    header{
+        height: 100%;
+    }
+
+    #MENU{
+        background-color: rgb(237, 100, 191);
+    }
+
+    #MENU ul{
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .btn-Toggle{
+        display: block;
+    }
+
+    #cate article p{
+        display: none;
+    }
+
+    #Platillos section img{
+        display: none;
+    }
+
+    #infoContactos{
+        display: block;
+        flex-direction: ro;
+        flex-wrap: wrap;
+        background-color: rgb(113, 92, 205);
+    }
+}
+
+
+/* media queries para pantallas pequeñas*/
+@media all and (max-width: 600px){
+    body {
+        background: rgba(90, 5, 5, 0.911);
+    }
+
+    /* Coloco miMenu Verticalmente*/
+    #MENU{
+        background-color: rgb(237, 212, 100);
+    }
+
+    header{
+        flex-direction: column;
+        height: 100%;
+    }
+    #MENU ul{
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .btn-Toggle{
+        display: block;
+    }
+
+    /** Slider de Imagenes**/
+    #sliderImg{
+        display: none;
+    }
+
+    #Platillos section img{
+        display: none;
+    }
+
+    #Platillos section h1{
+        font-size: small;
+    }
+   
+    #Platillos section figcaption{
+        display: none;
+    }
+    
+    #infoContactos iframe{
+        display: none;
+    }
+    
+
+}
+
+/********/
+@media only screen and (max-width: 600px) and (orientation: landscape){
+    body{
+        background: rgb(5, 58, 88)
+    }
+}
